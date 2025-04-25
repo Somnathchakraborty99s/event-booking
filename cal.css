@@ -1,0 +1,237 @@
+.calendar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(24, 178, 255, 0.474);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar-nav-button {
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calendar-nav-button:hover {
+    background: #3a5a8a;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ec0808;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    aspect-ratio: 1/1;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+
+.calendar-day:hover {
+    background-color: #f0f8ff;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.day-events {
+    flex-grow: 1;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.event-slot {
+    background-color: #e3f2fd;
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.event-slot:hover {
+    background-color: #bbdefb;
+}
+
+.event-slot-booked {
+    background-color: #ffcdd2;
+    cursor: not-allowed;
+}
+
+.event-slot-available {
+    background-color: #c8e6c9;
+}
+
+.current-day {
+    background-color: #e3f2fd;
+    border: 1px solid #4a6fa5;
+}
+
+.other-month {
+    color: #aaa;
+    background-color: #f9f9f9;
+}
+
+.booking-modal {
+    display: none;
+    /* position:; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    /* display: flex; */
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-booking {
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.submit-booking:hover {
+    background: #3a5a8a;
+}
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.time-slot {
+    background: #e3f2fd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-slot:hover {
+    background: #bbdefb;
+}
+
+.time-slot-selected {
+    background: #4a6fa5;
+    color: white;
+}
+
+.time-slot-booked {
+    background: #ffcdd2;
+    cursor: not-allowed;
+}
+.main{
+    display: flex;
+
+}
+
+@media (max-width: 768px) {
+    .calendar-day {
+        padding: 5px;
+        font-size: 14px;
+    }
+    
+    .day-events {
+        display: none;
+    }
+    .main{
+        display: initial;
+    
+    }
+}
